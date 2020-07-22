@@ -8,9 +8,12 @@ import { HttpClient } from '@angular/common/http';
 
 export class FileUploaderService {
 
-  constructor(private http : HttpClient) { }
+  constructor(private http: HttpClient) { }
   // My Students: please replace the post url below 
   fileUpload(file: FormData) {
-    return this.http.post('http://localhost:8080/upload-ng', file);
+  console.log("eliran")
+    let a = this.http.post('http://ec2-54-210-238-54.compute-1.amazonaws.com/upload-ng', file);
+    console.log("asdasd")
+  return a;
   }
 }
