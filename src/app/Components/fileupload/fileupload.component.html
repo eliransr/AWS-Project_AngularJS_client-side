@@ -1,0 +1,16 @@
+
+
+<div class="main">
+  <h1>Please upload your file</h1>
+  <input (change)="onFilePicked($event)" class="custom-file-input"
+         placeholder="Upload File" type="file" />
+  <button (click)="onFileUpload()" class="myButton">Upload File</button>
+  <p *ngIf="errorMsg"> Please Select A File</p>
+</div>
+
+
+<br>
+<br>
+<h3 *ngIf ="doctor">SimilarityResult </h3>
+<p *ngIf = "doctor" > <b>Name:</b> {{doctor.user_name}}  <br><b>Similarity Percent:</b>:{{doctor.similarity}} <br> <b>Specialization:</b>{{doctor.specialization}} <br>  <b>Location:</b> {{doctor.Location}} <br> <b>Seniority:</b> {{doctor.seniority}} </p>
+

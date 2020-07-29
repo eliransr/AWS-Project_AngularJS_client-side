@@ -1,5 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { map } from 'rxjs/operators';  
+import { BehaviorSubject, Observable } from 'rxjs';  
+import { HttpHeaders } from '@angular/common/http'; 
 
 
 @Injectable({
@@ -10,10 +13,22 @@ export class FileUploaderService {
 
   constructor(private http: HttpClient) { }
   // My Students: please replace the post url below 
-  fileUpload(file: FormData) {
-  console.log("eliran")
-    let a = this.http.post('http://ec2-54-210-238-54.compute-1.amazonaws.com/upload-ng', file);
-    console.log("asdasd")
-  return a;
+  
+  fileUpload(file: FormData):Observable<any> {
+  return this.http.post('http://ec2-3-84-231-193.compute-1.amazonaws.com/upload-ng', file);
   }
+
+
+  // fileUpload(file: FormData) {
+  //   console.log("אלירן")
+  //    console.log(this.http.get<any>('http://ec2-3-84-231-193.compute-1.amazonaws.com/useRekognition'));
+  //    return this.http.get<any>('http://ec2-3-84-231-193.compute-1.amazonaws.com/useRekognition');
+  // }
+
+  // getComareasionn() {  
+  //   return this.http.get<any>('http://xxx.xxx.4.xxx:9200/pcn/_search');  
+  //   }  
+
+
 }
+  
