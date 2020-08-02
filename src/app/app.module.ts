@@ -28,6 +28,7 @@ import { FileuploadComponent } from './Components/fileupload/fileupload.componen
 
 const appRoutes: Routes = [
   { path: 'fileupload', component: FileuploadComponent },
+  { path: 'resultrekognition', component: FileuploadComponent },
   { path: "",
     redirectTo: '/fileupload',
     pathMatch: 'full'
@@ -38,9 +39,7 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     NavComponent,
-    FileuploadComponent
-  
-    ,
+    FileuploadComponent,
   ],
   imports: [
     BrowserModule,

@@ -5,4 +5,5 @@ export interface Doctor {
     Location?:string,
     specialization?:string,
     seniority?:string,
+    name?:string,
 }

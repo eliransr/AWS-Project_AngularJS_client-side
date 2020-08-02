@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FileUploaderService } from 'src/app/file-uploader.service';
 import {Doctor} from 'src/app/interfaces/doctor'
+
  
 @Component({
   selector: 'app-fileupload',
@@ -20,6 +21,9 @@ export class FileuploadComponent implements OnInit {
   }
   ngOnInit(): void {
     // throw new Error("Method not implemented.");
+  }
+  refresh(): void {
+    window.location.reload();
   }
 
   onFilePicked(event: Event): void {
@@ -41,6 +45,15 @@ export class FileuploadComponent implements OnInit {
     const fileForm = new FormData();
     fileForm.append('file', this.fileObj);
     this.fileUploadService.fileUpload(fileForm).subscribe(res => {
+      
+      {res.similarity?
+        res.similarity=parseFloat(res.similarity).toFixed(3)
+        :
+        null
+      }
+      this.doctor=res;
+      console.log(res)
+
       
       this.doctor=res;
       // console.log(res);
