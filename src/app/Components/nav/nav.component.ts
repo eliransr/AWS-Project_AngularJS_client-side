@@ -12,7 +12,7 @@ import { Location } from "@angular/common";
 })
 export class NavComponent {
 
-  title: string = 'Aws app'
+  title: string = 'Recognition doctor'
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
@@ -27,7 +27,7 @@ export class NavComponent {
    
     router.events.subscribe(val => {
       if (location.path() == "/fileupload") {
-        this.title = 'File uploader';
+        this.title = 'Recognition doctor';
         console.log(val);        
       }
    

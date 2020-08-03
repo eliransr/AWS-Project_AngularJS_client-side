@@ -23,7 +23,7 @@ export class FileuploadComponent implements OnInit {
     // throw new Error("Method not implemented.");
   }
   refresh(): void {
-    window.location.reload();
+   this.doctor=null;
   }
 
   onFilePicked(event: Event): void {
