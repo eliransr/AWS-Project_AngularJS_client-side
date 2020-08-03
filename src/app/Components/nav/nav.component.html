@@ -1,8 +1,13 @@
-<mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport
-      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-      [mode]="(isHandset$ | async) ? 'over' : 'side'"
-      [opened]="(isHandset$ | async) === false">
+
+      <mat-sidenav-container class="sidenav-container">
+        <mat-sidenav #drawer class="sidenav" fixedInViewport
+            [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+            [mode]="(isHandset$ | async) ? 'over' : 'side'"
+            [opened]="(isHandset$ | async) === false">
+            <br>
+            <h2 class="welcomeText">Welcome</h2>
+            <p class="name" style="color: cornflowerblue;"><b>a@a.com</b></p>
+            <hr>
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
       <a mat-list-item href="http://healthproject-20200727224035-hostingbucket-prod.s3-website-us-east-1.amazonaws.com/appointments" routerLinkActive="active">Appointments<mat-icon  aria-label="Example schedule icon">schedule</mat-icon></a>
@@ -10,7 +15,7 @@
       <a mat-list-item href="http://healthproject-20200727224035-hostingbucket-prod.s3-website-us-east-1.amazonaws.com/diagnosis">Medical diagnosis<mat-icon  aria-label="Example scatter_plot icon">scatter_plot</mat-icon></a>
       <a mat-list-item href="http://healthproject-20200727224035-hostingbucket-prod.s3-website-us-east-1.amazonaws.com/store-page">Store of medicines  <mat-icon  aria-label="Example store icon">store</mat-icon></a>
       <a mat-list-item href="http://healthproject-20200727224035-hostingbucket-prod.s3-website-us-east-1.amazonaws.com/cart-page">Your Cart <mat-icon  aria-label="Example shopping_cart icon">shopping_cart</mat-icon></a>
-      <a mat-list-item href="http://aws-angular-application.s3-website-us-east-1.amazonaws.com/fileupload">Recognition doctor <mat-icon  aria-label="Example face icon">face</mat-icon></a>
+      <a mat-list-item >Recognition doctor <mat-icon  aria-label="Example face icon">face</mat-icon></a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -27,6 +32,9 @@
       <mat-nav-list>
        <a class ="title" mat-list-item href="http://healthproject-20200727224035-hostingbucket-prod.s3-website-us-east-1.amazonaws.com/welcome"><mat-icon  aria-label="Example face icon">home</mat-icon>{{title}} </a>
       </mat-nav-list>
+       <span class = "spacer"> </span>
+       <a class ="whitelink" >Logout</a>
+      
       </mat-toolbar>
     <!-- Add Content Here -->
   <router-outlet></router-outlet>

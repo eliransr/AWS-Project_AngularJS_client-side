@@ -14,8 +14,22 @@
   position: sticky;
   top: 0;
   z-index: 1;
+  background:#673ab7 ;
+  
 }
 .title{
+  display: inline-block;
   color: white;
   font-size: 24px;
+ 
 }
+.whitelink{
+ margin-left: 70%; 
+}
+.name{
+  margin-left:15px;
+}
+.welcomeText{
+  text-align:center;
+}
+
