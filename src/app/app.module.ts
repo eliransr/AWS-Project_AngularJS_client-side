@@ -27,10 +27,10 @@ import { NavComponent } from './Components/nav/nav.component';
 import { FileuploadComponent } from './Components/fileupload/fileupload.component';
 
 const appRoutes: Routes = [
-  { path: 'fileupload', component: FileuploadComponent },
+  { path: 'recognitiondoctor', component: FileuploadComponent },
   { path: 'resultrekognition', component: FileuploadComponent },
   { path: "",
-    redirectTo: '/fileupload',
+    redirectTo: '/recognitiondoctor',
     pathMatch: 'full'
   },
 ];
